@@ -84,4 +84,11 @@ public class Controller {
         return serviceDetalle.listar();
     }
 
+    @DeleteMapping("detalles/{id}")
+    public Object deleteDetalle(@PathVariable("id") int id) {
+        DetalleHistoria delete = serviceDetalle.delete(id);
+
+        return delete;
+    }
+
 }
